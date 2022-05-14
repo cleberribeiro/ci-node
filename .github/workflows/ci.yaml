@@ -4,13 +4,15 @@ jobs:
   check-application:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout dependencies
+        uses: actions/checkout@v3
+      - name: Setup Node dependencies
+        uses: actions/setup-node@v3
         with:
           node-version: 16
       - name: Install dependencies
         run: npm install
       - name: Run unit tests
-      - run: npm run test
+        run: npm run test
       - name: Run Application
-      - run: npm start
+        run: npm start
