@@ -3,12 +3,12 @@ on:
   pull_request:
     branches:
       - develop
-strategy:
-  matrix:
-    node: ['15', '16']
 jobs:
   check-application:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['15', '16']
     steps:
       - name: Checkout dependencies
         uses: actions/checkout@v3
