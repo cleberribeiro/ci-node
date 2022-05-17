@@ -38,5 +38,5 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v3
         with:
-          push: false
+          push: true
           tags: cleber79/ci-node:latest
