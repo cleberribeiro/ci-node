@@ -5,7 +5,7 @@ on:
       - develop
 jobs:
   check-application:
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout dependencies
         uses: actions/checkout@v3
